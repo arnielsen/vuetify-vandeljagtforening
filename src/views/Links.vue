@@ -9,16 +9,18 @@
           
           <v-flex md12>
             <v-list>
-              <v-list-tile v-bind:href="item.url" target="_blank" v-for="item in links" :key="item.title">
-                
-                <v-list-tile-content>
-                  <v-list-tile-title v-html="item.title"></v-list-tile-title>
-                  <v-list-tile-sub-title v-html="item.categories"></v-list-tile-sub-title>
-                </v-list-tile-content>
-                <v-list-tile-avatar>
-                  <v-icon >open_in_new</v-icon>
-                </v-list-tile-avatar>
-              </v-list-tile>
+              <v-list-group v-for="category in categories" :key="category.title" v-model="category.active" :prepend-icon="category.action" no-action>
+                <v-list-tile slot="activator">
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ category.title }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile v-bind:href="item.url" target="_blank" v-for="item in category.items" :key="item.title">
+                  <v-list-tile-content>
+                    <v-list-tile-title v-html="item.title"></v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list-group>
             </v-list>
           </v-flex>
         </v-layout>
@@ -37,17 +39,65 @@ import { Component, Vue } from 'vue-property-decorator';
   },
 })
 export default class Members extends Vue {
-  links: any[];
+  categories: any[];
 
   constructor() {
     super();
-    this.links = [
-      { title: 'Østjysk våbenhandel', url: 'https://www.huntinglife.net/', categories: ['Jagtbutik']},
-      { title: 'Jagttegn.dk', url: 'https://jagttegn.dk', categories: ['Jagt'] },
-      { title: 'Danmark Jægerforbund', url: 'https://www.jaegerforbundet.dk/', categories: ['Jagt'] },
-      { title: 'Randbøl Jagtforening', url: 'http://www.randboel-jagtforening.dk/', categories: ['Jagtforening', 'Skydebane'] },
-      { title: 'Vingsted skydebaner', url: 'https://skydebaneforeningen.dk/Vingsted-skydebaner', categories: ['Skydebane'] }
-      //{ title: '', url: '', categories: [''] }
+      this.categories = [
+      {
+        action: 'pets',
+        title: 'Jagt',
+        items: [
+          { 
+            title: 'Jagttegn.dk',
+            url: 'https://jagttegn.dk'
+          },
+          { 
+            title: 'Danmark Jægerforbund',
+            url: 'https://www.jaegerforbundet.dk/'
+          }
+        ]
+      },
+      {
+        action: 'school',
+        title: 'Skydebaner',
+        items: [
+          { 
+            title: 'Vingsted skydebaner',
+            url: 'https://skydebaneforeningen.dk/Vingsted-skydebaner'
+          }
+        ]
+      },
+      {
+        action: 'people',
+        title: 'Jagtforeninger',
+        items: [
+          { 
+            title: 'Randbøl Jagtforening',
+            url: 'http://www.randboel-jagtforening.dk/'
+          }
+        ]
+      },
+      {
+        action: 'shopping_cart',
+        title: 'Jagt butikker og grej',
+        items: [
+          { 
+            title: 'Østjysk våbenhandel',
+            url: 'https://www.huntinglife.net/'
+          },
+        ]
+      },
+      {
+        action: 'local_activity',
+        title: 'Lokalt',
+        items: [
+          { 
+            title: "Dagli'Brugsen Vandel",
+            url: 'https://www.facebook.com/DagliBrugsenVandel/'
+          }
+        ]
+      },
     ]
   }
 }

@@ -26,11 +26,11 @@ export default new Router({
       name: 'Medlemmer',
       component: () => import(/* webpackChunkName: "about" */ './views/Members.vue')
     },
-    {
-      path: '/albums',
-      name: 'Albums',
-      component: () => import(/* webpackChunkName: "about" */ './views/Albums.vue')
-    },
+    // {
+    //   path: '/albums',
+    //   name: 'Albums',
+    //   component: () => import(/* webpackChunkName: "about" */ './views/Albums.vue')
+    // },
     {
       path: '/history',
       name: 'Historie',

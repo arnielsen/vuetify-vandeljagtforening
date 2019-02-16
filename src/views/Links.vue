@@ -1,8 +1,8 @@
 <template>
   <div class="links">
-    <h1 class="subheading">Links</h1>
+    <h1 class="subheading mt-4">Links</h1>
 
-    <v-container class="my-5">
+    <v-container>
       
       <v-card flat>
         <v-layout row class="pa-3">
@@ -10,6 +10,7 @@
           <v-flex md12>
             <v-list>
               <v-list-group v-for="category in categories" :key="category.title" v-model="category.active" :prepend-icon="category.action" no-action>
+                
                 <v-list-tile slot="activator">
                   <v-list-tile-content>
                     <v-list-tile-title>{{ category.title }}</v-list-tile-title>

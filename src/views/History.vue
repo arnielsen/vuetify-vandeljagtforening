@@ -1,8 +1,8 @@
 <template>
   <div class="history">
-    <h1 class="subheading">Historie</h1>
+    <h1 class="subheading mt-4">Historie</h1>
     
-    <v-container class="my-5">
+    <v-container>
       
       <v-card flat>
         <v-layout row class="pa-3">

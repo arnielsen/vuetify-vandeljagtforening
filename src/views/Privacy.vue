@@ -1,8 +1,8 @@
 <template>
   <div class="privacy">
-    <h1 class="subheading">Persondata</h1>
+    <h1 class="subheading mt-4">Persondata</h1>
 
-    <v-container class="my-5">
+    <v-container>
       
       <v-card flat>
         <v-layout row class="pa-3">

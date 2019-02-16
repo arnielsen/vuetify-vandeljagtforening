@@ -1,8 +1,8 @@
 <template>
   <div class="members">
-    <h1 class="subheading">Medlemmer</h1>
+    <h1 class="subheading mt-4">Medlemmer</h1>
 
-    <v-container class="my-5">
+    <v-container>
       
       <v-layout row class="mb-3">
         <v-tooltip top>
@@ -36,12 +36,12 @@
               <div class="grey--text">{{ member.role }}</div>
             </v-card-text>
             <v-card-actions>
-              <v-btn flat v-if="member.email" href="`mailto:`">
+              <v-btn small flat color="green" v-if="member.email" href="`mailto:`">
                 <v-icon small left>message</v-icon>
                 <span>Message</span>
               </v-btn>
               <v-btn v-else flat disabled>
-                <v-icon small left>message</v-icon>
+                <v-icon small flat left>message</v-icon>
                 <span>Message</span>
               </v-btn>
             </v-card-actions>

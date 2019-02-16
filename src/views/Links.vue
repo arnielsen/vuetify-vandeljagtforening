@@ -39,7 +39,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
   },
 })
-export default class Members extends Vue {
+export default class Links extends Vue {
   categories: any[];
 
   constructor() {

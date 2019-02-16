@@ -113,7 +113,7 @@
               Vi behandler personoplysninger ud fra legitime interesser eller dit samtykke
             </div>
             <p>
-              I det omfang vi behandler dine medlemsoplysninger på baggrund af interesseafvejningsreglen,vildennebehandlingudelukkendeværemotiveretafberettigede(legitime) interessersom:
+              I det omfang vi behandler dine medlemsoplysninger på baggrund af interesse af vejningsreglen, vil denne behandling udelukkende være motiveret af berettigede (legitime) interesser som:
             </p>
             <ul>
               <li>Håndtering af dine medlemsrettigheder i henhold til vedtægterne m.v.,herunder i forhold til generalforsamling</li>
@@ -203,9 +203,9 @@
             <div class="title">Revidering af privatlivspolitikken</div>
             <p>
               Vi forbeholder os retten til at foretage ændringer i denne privatlivspolitik fra tid til anden.
-Ved ændringer vil datoen øverst i privatlivspolitikken blive ændret. Den til enhver tid
-gældende privatlivspolitik vil være tilgængelig på vores websted. Ved væsentlige
-ændringer vil du modtage meddelelse herom
+              Ved ændringer vil datoen øverst i privatlivspolitikken blive ændret. Den til enhver tid
+              gældende privatlivspolitik vil være tilgængelig på vores websted. Ved væsentlige
+              ændringer vil du modtage meddelelse herom
             </p>
 
           </v-flex>

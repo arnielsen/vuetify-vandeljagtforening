@@ -12,13 +12,6 @@
           </v-btn>
           <span>Sorter medlemslisten efter navn</span>
         </v-tooltip>
-        <v-tooltip top>
-          <v-btn small flat color="grey" @click="sortBy('role')" slot="activator">
-            <v-icon small left>domain</v-icon>
-            <span class="caption text-lowercase">rolle</span>
-          </v-btn>
-          <span >Sorter medlemslisten efter rolle</span>
-        </v-tooltip>
       </v-layout>
 
       <v-layout row wrap>
@@ -87,14 +80,16 @@ export default class Members extends Vue {
   constructor() {
     super();
     this.members = [
-      { name: 'Anders Røndbjerg Nielsen', role: 'Bestyrelsesmedlem', email: 'arnielsen@outlook.dk', memberships: ['B-medlem'], avatar: '/avatars/arnielsen.jpg' },
-      { name: 'Dieter Thomsen', role: 'Bestyrelsesmedlem', email: '', memberships: ['B-medlem'] },
-      { name: 'Karsten Poulsen', role: 'Næstformand', email: '', memberships: ['B-medlem'] },
-      { name: 'Lasse Røndbjerg', role: 'Sekretær', email: '', memberships: ['B-medlem'] },
-      { name: 'Morten Røndbjerg Nielsen', role: 'Kasserer', email: '', memberships: ['B-medlem'] },
-      { name: 'Peter Ebbesen', role: 'Medlem', email: '', memberships: ['A-medlem', 'Æresmedlem']},
-      { name: 'Svend-Aage Hansen', role: 'Formand', email: '', memberships: ['A-medlem'] },
-      //{ name: '', role: '', email: '', memberships: ['']},
+      { name: 'Svend-Aage Hansen', role: 'Formand', email: '' },
+      { name: 'Morten Røndbjerg Nielsen', role: 'Kasserer', email: '' },
+      { name: 'Karsten Poulsen', role: 'Næstformand', email: '' },
+      { name: 'Anders Røndbjerg Nielsen', role: 'Bestyrelsesmedlem', email: 'arnielsen@outlook.dk', avatar: '/avatars/arnielsen.jpg' },
+      { name: 'Dieter Thomsen', role: 'Bestyrelsesmedlem', email: '' },
+      { name: 'Mogens Jensen', role: 'Suppleant', email: ''},
+      { name: 'Victor Jøker', role: 'Suppleant', email: ''},
+      
+      // todo: membersince, badges(5 year, 10 year, honorable memberships etc)
+      //{ name: '', role: '', email: ''},
     ]
   }
 

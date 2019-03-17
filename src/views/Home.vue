@@ -8,7 +8,7 @@
       <v-layout row wrap>
         <v-flex xs12 sm12 md6 lg4>
           <v-card flat class="text-xs-center ma-3 py-3">
-            <v-card-title class="headline">Seneste aktiviter</v-card-title>       
+            <v-card-title class="headline">Aktiviteter 2019</v-card-title>       
             
             <v-list>
               <v-list-tile v-for="activity in activities" :key="activity.title" :href="activity.url" target="_blank"> 
@@ -37,7 +37,7 @@
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">Find os på Facebook</h3>
-                <div>Her vil du kunne finde seneste nyheder, begivenheder...</div>
+                <div>Hvis du ønsker at følge med i foreningens aktiviteter, eller ønsker du at være medlem så følg os på Facebook og kontakt os derigennem.</div>
               </div>
             </v-card-title> 
             <v-card-actions>
@@ -68,10 +68,10 @@ export default class Home extends Vue {
     super();
     this.randomNumber = this.getRandomNumber();
     this.activities = [
-      { title: 'Generalforsamling 2018-19', description: '...', startdate: '22-02-2019', url: 'https://www.facebook.com/events/200612673995046/' },
-      { title: 'Fællesjagt 2018', description: '...', startdate: '24-11-2018', url: 'https://www.facebook.com/events/223732891551015/' },
-      { title: 'Havjagt december 2018', description: '...', startdate: '04-11-2018', url: 'https://www.facebook.com/events/282574922385346/' },
-      { title: 'Pokalskydning 2018', description: '...', startdate: '01-09-2018', url: 'https://www.facebook.com/events/930697830388357/' },
+      { title: 'Bukkemorgen', description: '...', startdate: new Date('04-16-2019'), url: 'https://www.facebook.com/events/2295528093864580/' },
+      { title: 'Arbejdsdag', description: '...', startdate: new Date('04-25-2019'), url: 'https://www.facebook.com/events/1996599430636996/' },
+      { title: 'Fællesjagt', description: '...', startdate: new Date('11-30-2019'), url: 'https://www.facebook.com/events/255424648698593/' },
+      { title: 'Generalforsamling 2019-20', description: '...', startdate: new Date('02-21-2020'), url: 'https://www.facebook.com/events/301200003890057/' },
       
       //{ title: '', description: '', startdate: '', url: '' },
     ]
